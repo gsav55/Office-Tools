@@ -1,0 +1,11 @@
+import os, glob
+
+#os.chdir('C:\Users\gsavage\Desktop\working')
+
+def rename(direc,pattern,titlepattern):
+    for pathAndFilename in glob.iglob(os.path.join(direc,pattern)):
+        title, ext = os.path.splitext(os.path.basename(pathAndFilename))
+        os.rename(pathAndFilename,pathAndFilename.replace('CCD 16', 'CCD 016'))
+
+
+rename(r"J:\13314 - FHO Women's Pavilion\Drawings\Tower CD Drawings\CCDs\CCD 016\CCD-016",r'*.pdf',r'%s CCD 16')

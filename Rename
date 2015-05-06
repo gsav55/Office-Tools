@@ -1,0 +1,106 @@
+Python 2.7.8 (default, Jun 30 2014, 16:03:49) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> import os
+>>> oc.getcwd
+
+Traceback (most recent call last):
+  File "<pyshell#1>", line 1, in <module>
+    oc.getcwd
+NameError: name 'oc' is not defined
+>>> os.getcwd
+<built-in function getcwd>
+>>> os.getcwd()
+'C:\\Python27'
+>>> os.chdir('C:\Users\gsavage\Desktop\Current Working Drawings\Mechanical')
+>>> os.getcwd()
+'C:\\Users\\gsavage\\Desktop\\Current Working Drawings\\Mechanical'
+>>> [os.rename(f,f.replace('-','.') for f in os.listdir('.') if not f.startwith('.')]
+ 
+SyntaxError: invalid syntax
+>>> [os.rename(f,f.replace('-','.')) for f in os.listdir('.') if not f.startwith('.')]
+
+Traceback (most recent call last):
+  File "<pyshell#9>", line 1, in <module>
+    [os.rename(f,f.replace('-','.')) for f in os.listdir('.') if not f.startwith('.')]
+AttributeError: 'str' object has no attribute 'startwith'
+>>> [os.rename(f,f.replace('-','.')) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace('.','-')) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace('-','.')) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace('.','-',2)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace('.','-',1)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace('-','.',1)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace(' ','',2)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> os.chdir('C:\Users\gsavage\Desktop\Current Working Drawings\Electrical')
+>>> [os.rename(f,f.replace('-','.',1)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace('_','',2)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> os.chdir('C:\Users\gsavage\Desktop\tmp')
+
+Traceback (most recent call last):
+  File "<pyshell#20>", line 1, in <module>
+    os.chdir('C:\Users\gsavage\Desktop\tmp')
+WindowsError: [Error 123] The filename, directory name, or volume label syntax is incorrect: 'C:\\Users\\gsavage\\Desktop\tmp'
+>>> os.chdir(C:\Users\gsavage\Desktop\tmp)
+SyntaxError: invalid syntax
+>>> os.chdir('C:\Users\gsavage\Desktop\tmp')
+
+Traceback (most recent call last):
+  File "<pyshell#22>", line 1, in <module>
+    os.chdir('C:\Users\gsavage\Desktop\tmp')
+WindowsError: [Error 123] The filename, directory name, or volume label syntax is incorrect: 'C:\\Users\\gsavage\\Desktop\tmp'
+>>> os.chdir("C:\Users\gsavage\Desktop\tmp")
+
+Traceback (most recent call last):
+  File "<pyshell#23>", line 1, in <module>
+    os.chdir("C:\Users\gsavage\Desktop\tmp")
+WindowsError: [Error 123] The filename, directory name, or volume label syntax is incorrect: 'C:\\Users\\gsavage\\Desktop\tmp'
+>>> os.chdir('C:\Users\gsavage\Desktop\working')
+>>> [os.rename(f,f.replace('_','-',1)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace('_','-',1)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace('-','.',1)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace(' ','',2)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace('-','.',2)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace('.','-',2)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace('-','.',1)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace(' ','_',2)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace('_','',2)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> os.chdir('J:\13314 - FHO Women's Pavilion\Drawings\Tower CD Drawings\Current Working Drawings\Bootleg\Bootleg Dimension Control Drawings 04-28-2014\THRU-3508F92891')
+	 
+SyntaxError: invalid syntax
+>>> os.chdir('J:\13314 - FHO Women\'s Pavilion\Drawings\Tower CD Drawings\Current Working Drawings\Bootleg\Bootleg Dimension Control Drawings 04-28-2014\THRU-3508F92891')
+
+Traceback (most recent call last):
+  File "<pyshell#36>", line 1, in <module>
+    os.chdir('J:\13314 - FHO Women\'s Pavilion\Drawings\Tower CD Drawings\Current Working Drawings\Bootleg\Bootleg Dimension Control Drawings 04-28-2014\THRU-3508F92891')
+WindowsError: [Error 3] The system cannot find the path specified: "J:[14 - FHO Women's Pavilion\\Drawings\\Tower CD Drawings\\Current Working Drawings\\Bootleg\\Bootleg Dimension Control Drawings 04-28-2014\\THRU-3508F92891"
+>>> os.chdir('C:\Users\gsavage\Desktop\Current Working Drawings\Electrical')
+>>> [os.rename(f,f.replace('','x',1)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace('x','',1)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> os.chdir('C:\Users\gsavage\Desktop\CCD16')
+>>> os.chdir('C:\Users\gsavage\Desktop\working')
+>>> [os.rename(f,f.replace('-','.',1)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> [os.rename(f,f.replace('_','',2)) for f in os.listdir('.') if not f.startswith('.')]
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>> 
